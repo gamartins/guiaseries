@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Nome: "
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/poster"
+        android:layout_toRightOf="@+id/poster"
+        android:layout_toEndOf="@+id/poster"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="41dp"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:id="@+id/seriesName"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:text="Gênero: "
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/seriesName"
+        android:layout_alignLeft="@+id/seriesName"
+        android:layout_alignStart="@+id/seriesName" />
+
+    <TextView
+        android:id="@+id/seriesGenre"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:text="Ano: "
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/seriesGenre"
+        android:layout_alignLeft="@+id/seriesGenre"
+        android:layout_alignStart="@+id/seriesGenre" />
+
+    <TextView
+        android:id="@+id/seriesYear"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:background="#000"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/poster" />
+
+</RelativeLayout>

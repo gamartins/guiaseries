@@ -1,6 +1,7 @@
-package br.com.martinsdev.guiadeseries;
+package br.com.martinsdev.guiadeseries.controller;
 
 import br.com.martinsdev.guiadeseries.model.Episode;
+import br.com.martinsdev.guiadeseries.model.ListPages;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import retrofit.Call;
 import retrofit.http.GET;
@@ -19,4 +20,7 @@ public interface MovieDatabaseClient {
     Call<Episode> getEpisode(
         @Path("id") int id
     );
+
+    @GET("tv/popular")
+    Call<ListPages> getPopularTvShows();
 }

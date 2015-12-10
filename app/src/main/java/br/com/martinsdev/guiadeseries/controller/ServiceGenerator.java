@@ -1,4 +1,4 @@
-package br.com.martinsdev.guiadeseries;
+package br.com.martinsdev.guiadeseries.controller;
 
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.Interceptor;
