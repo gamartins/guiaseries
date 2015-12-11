@@ -92,6 +92,10 @@ public class Result {
      *     The genreIds
      */
     public List<Integer> getGenreIds() {
+        // Some TVShows have no genre (empty) resulting in NullPointerException
+        if (genreIds.size() == 0) {
+            genreIds.add(0);
+        }
         return genreIds;
     }
 

@@ -6,11 +6,12 @@ import br.com.martinsdev.guiadeseries.model.TVShow;
 import retrofit.Call;
 import retrofit.http.GET;
 import retrofit.http.Path;
+import retrofit.http.Query;
 
 /**
  * Created by gabriel on 08/12/15.
  */
-public interface MovieDatabaseClient {
+public interface TVShowDatabaseClient {
     @GET("tv/{id}")
     Call<TVShow> getTvShow(
         @Path(("id")) int id
@@ -22,5 +23,7 @@ public interface MovieDatabaseClient {
     );
 
     @GET("tv/popular")
-    Call<ListPages> getPopularTvShows();
+    Call<ListPages> getPopularTvShows(
+        @Query("page") int page
+    );
 }

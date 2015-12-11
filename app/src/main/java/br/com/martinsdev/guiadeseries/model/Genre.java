@@ -22,6 +22,7 @@ public class Genre {
 
     private static final Map<Integer, String> myMap = Collections.unmodifiableMap(
         new HashMap<Integer, String>() {{
+            put(0, "Não encontrado");
             put(28,"Ação");
             put(12,"Aventura");
             put(16,"Animação");
@@ -47,7 +48,7 @@ public class Genre {
             put(10763,"Noticias");
             put(10764,"Reality");
             put(10765,"Sci-Fi e Fantasia");
-            put(10766,"Soap");
+            put(10766,"Novela");
             put(10767,"Entrevistas");
             put(10768,"Guerra e Política");
         }});
