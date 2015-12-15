@@ -12,18 +12,14 @@ import retrofit.http.Query;
  * Created by gabriel on 08/12/15.
  */
 public interface TVShowDatabaseClient {
-    @GET("tv/{id}")
-    Call<TVShow> getTvShow(
-        @Path(("id")) int id
-    );
-
-    @GET("tv/{id}")
-    Call<Episode> getEpisode(
-        @Path("id") int id
-    );
-
     @GET("tv/popular")
     Call<ListPages> getPopularTvShows(
         @Query("page") int page
+    );
+
+    @GET("search/tv")
+    Call<ListPages> searchTvShow(
+        @Query("query") String query,
+        @Query("page") int contPages
     );
 }
