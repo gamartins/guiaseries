@@ -21,4 +21,11 @@ public class Converter {
 
         return cal;
     }
+
+    static public String intToString(int i){
+        StringBuilder sb = new StringBuilder();
+        sb.append(i);
+        String str = sb.toString();
+        return str;
+    }
 }

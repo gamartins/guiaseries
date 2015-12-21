@@ -78,4 +78,17 @@
         android:layout_marginTop="15dp"
         android:id="@+id/poster" />
 
+    <ImageView
+        android:id="@+id/add_serie"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/circle"
+        android:alpha=".60"
+        android:layout_alignTop="@+id/poster"
+        android:layout_alignLeft="@+id/poster"
+        android:layout_alignStart="@+id/poster"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="65dp"
+        android:visibility="invisible"/>
+
 </RelativeLayout>

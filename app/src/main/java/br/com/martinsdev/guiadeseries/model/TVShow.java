@@ -10,6 +10,8 @@ import com.google.gson.annotations.SerializedName;
 @Generated("org.jsonschema2pojo")
 public class TVShow {
 
+    private Boolean isWatched = false;
+
     @SerializedName("backdrop_path")
     @Expose
     private String backdropPath;
@@ -88,6 +90,14 @@ public class TVShow {
     @SerializedName("vote_count")
     @Expose
     private Integer voteCount;
+
+    public Boolean getIsWatched() {
+        return isWatched;
+    }
+
+    public void setIsWatched(Boolean isWatched) {
+        this.isWatched = isWatched;
+    }
 
     /**
      * 

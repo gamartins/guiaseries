@@ -1,5 +1,7 @@
 package br.com.martinsdev.guiadeseries.view;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +10,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -61,7 +62,7 @@ public class SelectSeries extends AppCompatActivity implements Callback {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if (newText.isEmpty()){
+                if (newText.isEmpty()) {
                     resetListView();
                 }
                 return true;

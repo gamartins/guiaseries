@@ -2,6 +2,7 @@
 package br.com.martinsdev.guiadeseries.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
@@ -9,6 +10,7 @@ import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
 public class Result {
+    private Boolean isWatched = false;
 
     @SerializedName("backdrop_path")
     @Expose
@@ -49,6 +51,17 @@ public class Result {
     @SerializedName("vote_count")
     @Expose
     private Integer voteCount;
+
+    public Result() {
+    }
+
+    public Boolean isWatched() {
+        return isWatched;
+    }
+
+    public void setWatched(Boolean isWatched) {
+        this.isWatched = isWatched;
+    }
 
     /**
      * 

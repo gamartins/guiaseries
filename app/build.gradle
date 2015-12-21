@@ -27,4 +27,6 @@ dependencies {
     compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'org.glassfish:javax.annotation:10.0-b28'
+//    Biblioteca para utilização das imagens arredondadas
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 }
