@@ -1,7 +1,6 @@
 package br.com.martinsdev.guiadeseries.view;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +18,7 @@ import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
 import br.com.martinsdev.guiadeseries.model.ListPages;
 import br.com.martinsdev.guiadeseries.model.Result;
 import br.com.martinsdev.guiadeseries.util.EndlessScrollListener;
-import br.com.martinsdev.guiadeseries.util.ResultAdapter;
+import br.com.martinsdev.guiadeseries.util.adapters.ResultAdapter;
 
 import retrofit.Call;
 import retrofit.Callback;
@@ -38,9 +37,9 @@ public class SelectSeries extends AppCompatActivity implements Callback {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.menu_select_series, menu);
 
-        menuItem = menu.findItem(R.id.search_button);
+        menuItem = menu.findItem(R.id.search_widget);
         searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -70,6 +69,18 @@ public class SelectSeries extends AppCompatActivity implements Callback {
         });
 
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.followed_search_button:
+                Intent intent = new Intent(this, FollowedSeries.class);
+                startActivity(intent);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

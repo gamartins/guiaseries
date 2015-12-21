@@ -5,7 +5,13 @@
     tools:context="br.com.martinsdev.guiadeseries.view.SelectSeries">
 
     <item
-        android:id="@+id/search_button"
+        android:id="@+id/followed_search_button"
+        android:icon="@drawable/ic_visibility_white_24dp"
+        android:title="followed_series_button"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/search_widget"
         android:icon="@android:drawable/ic_menu_search"
         android:title="search_button"
         app:showAsAction="always"

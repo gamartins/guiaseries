@@ -1,4 +1,4 @@
-package br.com.martinsdev.guiadeseries.util;
+package br.com.martinsdev.guiadeseries.util.adapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -22,6 +22,8 @@ import java.util.Set;
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.model.Genre;
 import br.com.martinsdev.guiadeseries.model.Result;
+import br.com.martinsdev.guiadeseries.util.Converter;
+import br.com.martinsdev.guiadeseries.util.DataStorage;
 
 /**
  * Created by gabriel on 09/12/15.
@@ -74,10 +76,6 @@ public class ResultAdapter extends ArrayAdapter<Result>{
                     // Serie removida das configurações do aplicativo
                     storage.removeSeries(result.getId());
                 }
-
-                // Teste do armazenamento de dados
-                ArrayList<String> seriesList = storage.getListSeries();
-                Log.v("Lista de series", seriesList.toString());
             }
         });
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.martinsdev.guiadeseries.view.SelectSeries">
+
+    <item
+        android:id="@+id/search_button"
+        android:icon="@drawable/ic_add_to_queue_white_24dp"
+        android:title="search_button"
+        app:showAsAction="always" />
+</menu>

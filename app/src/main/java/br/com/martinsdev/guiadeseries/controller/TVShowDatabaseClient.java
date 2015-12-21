@@ -22,4 +22,9 @@ public interface TVShowDatabaseClient {
         @Query("query") String query,
         @Query("page") int contPages
     );
+
+    @GET("tv/{id}")
+    Call<TVShow> getTvShow(
+        @Path("id") String id
+    );
 }
