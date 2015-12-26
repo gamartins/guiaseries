@@ -15,39 +15,51 @@ public class Result {
     @SerializedName("backdrop_path")
     @Expose
     private String backdropPath;
+
     @SerializedName("first_air_date")
     @Expose
     private String firstAirDate;
+
     @SerializedName("genre_ids")
     @Expose
     private ArrayList<Integer> genreIds = new ArrayList<Integer>();
+
     @SerializedName("id")
     @Expose
     private Integer id;
+
     @SerializedName("original_language")
     @Expose
     private String originalLanguage;
+
     @SerializedName("original_name")
     @Expose
     private String originalName;
+
     @SerializedName("overview")
     @Expose
     private String overview;
+
     @SerializedName("origin_country")
     @Expose
     private ArrayList<String> originCountry = new ArrayList<String>();
+
     @SerializedName("poster_path")
     @Expose
     private String posterPath;
+
     @SerializedName("popularity")
     @Expose
     private Double popularity;
+
     @SerializedName("name")
     @Expose
     private String name;
+
     @SerializedName("vote_average")
     @Expose
     private Double voteAverage;
+
     @SerializedName("vote_count")
     @Expose
     private Integer voteCount;

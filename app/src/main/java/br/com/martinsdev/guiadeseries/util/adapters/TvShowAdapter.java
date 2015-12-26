@@ -20,7 +20,7 @@ import br.com.martinsdev.guiadeseries.model.TVShow;
  */
 public class TvShowAdapter extends ArrayAdapter<TVShow> {
     public TvShowAdapter(Context context, ArrayList<TVShow> tvShows) {
-        super(context, R.layout.item_list_followed, tvShows);
+        super(context, R.layout.activity_followed_series_item_list, tvShows);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class TvShowAdapter extends ArrayAdapter<TVShow> {
         String baseURL = "http://image.tmdb.org/t/p/w154";
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_list_followed, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_followed_series_item_list, parent, false);
         }
 
         ImageView poster = (ImageView) convertView.findViewById(R.id.followed_poster);

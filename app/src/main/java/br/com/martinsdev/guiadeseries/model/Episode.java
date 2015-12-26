@@ -13,78 +13,91 @@ public class Episode {
     @SerializedName("backdrop_path")
     @Expose
     private String backdropPath;
+
     @SerializedName("created_by")
     @Expose
-    private List<Object> createdBy = new ArrayList<Object>();
-    @SerializedName("episode_run_time")
-    @Expose
     private List<Integer> episodeRunTime = new ArrayList<Integer>();
+
     @SerializedName("first_air_date")
     @Expose
     private String firstAirDate;
+
     @SerializedName("genres")
     @Expose
     private List<Genre> genres = new ArrayList<Genre>();
+
     @SerializedName("homepage")
     @Expose
     private String homepage;
+
     @SerializedName("id")
     @Expose
     private Integer id;
+
     @SerializedName("in_production")
     @Expose
     private Boolean inProduction;
+
     @SerializedName("languages")
     @Expose
     private List<String> languages = new ArrayList<String>();
+
     @SerializedName("last_air_date")
     @Expose
     private String lastAirDate;
+
     @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("networks")
-    @Expose
-    private List<Network> networks = new ArrayList<Network>();
+
     @SerializedName("number_of_episodes")
     @Expose
     private Integer numberOfEpisodes;
+
     @SerializedName("number_of_seasons")
     @Expose
     private Integer numberOfSeasons;
+
     @SerializedName("origin_country")
     @Expose
     private List<String> originCountry = new ArrayList<String>();
+
     @SerializedName("original_language")
     @Expose
     private String originalLanguage;
+
     @SerializedName("original_name")
     @Expose
     private String originalName;
+
     @SerializedName("overview")
     @Expose
     private String overview;
+
     @SerializedName("popularity")
     @Expose
     private Double popularity;
+
     @SerializedName("poster_path")
     @Expose
     private String posterPath;
-    @SerializedName("production_companies")
-    @Expose
-    private List<Object> productionCompanies = new ArrayList<Object>();
+
     @SerializedName("seasons")
     @Expose
     private List<Season> seasons = new ArrayList<Season>();
+
     @SerializedName("status")
     @Expose
     private String status;
+
     @SerializedName("type")
     @Expose
     private String type;
+
     @SerializedName("vote_average")
     @Expose
     private Integer voteAverage;
+
     @SerializedName("vote_count")
     @Expose
     private Integer voteCount;
@@ -105,24 +118,6 @@ public class Episode {
      */
     public void setBackdropPath(String backdropPath) {
         this.backdropPath = backdropPath;
-    }
-
-    /**
-     * 
-     * @return
-     *     The createdBy
-     */
-    public List<Object> getCreatedBy() {
-        return createdBy;
-    }
-
-    /**
-     * 
-     * @param createdBy
-     *     The created_by
-     */
-    public void setCreatedBy(List<Object> createdBy) {
-        this.createdBy = createdBy;
     }
 
     /**
@@ -290,24 +285,6 @@ public class Episode {
     /**
      * 
      * @return
-     *     The networks
-     */
-    public List<Network> getNetworks() {
-        return networks;
-    }
-
-    /**
-     * 
-     * @param networks
-     *     The networks
-     */
-    public void setNetworks(List<Network> networks) {
-        this.networks = networks;
-    }
-
-    /**
-     * 
-     * @return
      *     The numberOfEpisodes
      */
     public Integer getNumberOfEpisodes() {
@@ -447,24 +424,6 @@ public class Episode {
      */
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
-    }
-
-    /**
-     * 
-     * @return
-     *     The productionCompanies
-     */
-    public List<Object> getProductionCompanies() {
-        return productionCompanies;
-    }
-
-    /**
-     * 
-     * @param productionCompanies
-     *     The production_companies
-     */
-    public void setProductionCompanies(List<Object> productionCompanies) {
-        this.productionCompanies = productionCompanies;
     }
 
     /**

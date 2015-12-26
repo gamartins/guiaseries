@@ -11,15 +11,19 @@ public class Season {
     @SerializedName("air_date")
     @Expose
     private String airDate;
+
     @SerializedName("episode_count")
     @Expose
     private Integer episodeCount;
+
     @SerializedName("id")
     @Expose
     private Integer id;
+
     @SerializedName("poster_path")
     @Expose
     private String posterPath;
+
     @SerializedName("season_number")
     @Expose
     private Integer seasonNumber;

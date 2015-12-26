@@ -1,23 +1,17 @@
 package br.com.martinsdev.guiadeseries.util.adapters;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.model.Genre;
@@ -33,7 +27,7 @@ public class ResultAdapter extends ArrayAdapter<Result>{
     private DataStorage storage;
 
     public ResultAdapter(Context context, ArrayList<Result> results) {
-        super(context, R.layout.item_list_series, results);
+        super(context, R.layout.activity_selected_series_item_list, results);
         storage = new DataStorage(context);
     }
 
@@ -43,7 +37,7 @@ public class ResultAdapter extends ArrayAdapter<Result>{
 
         if (convertView == null){
             convertView = LayoutInflater.from(getContext())
-                    .inflate(R.layout.item_list_series, parent, false);
+                    .inflate(R.layout.activity_selected_series_item_list, parent, false);
         }
 
         TextView seriesName = (TextView) convertView.findViewById(R.id.seriesName);
