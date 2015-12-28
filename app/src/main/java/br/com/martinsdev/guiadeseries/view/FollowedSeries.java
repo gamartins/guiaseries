@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
-import br.com.martinsdev.guiadeseries.controller.TVShowDatabaseClient;
+import br.com.martinsdev.guiadeseries.controller.DatabaseClientTVShow;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
 import br.com.martinsdev.guiadeseries.util.adapters.TvShowAdapter;
@@ -21,7 +21,7 @@ import retrofit.Response;
 import retrofit.Retrofit;
 
 public class FollowedSeries extends AppCompatActivity implements Callback{
-    private TVShowDatabaseClient client = ServiceGenerator.createService(TVShowDatabaseClient.class);
+    private DatabaseClientTVShow client = ServiceGenerator.createService(DatabaseClientTVShow.class);
     private ArrayList<String> listSeriesId;
     private ArrayList<TVShow> tvShowArrayList;
     private GridView gridViewSeries;

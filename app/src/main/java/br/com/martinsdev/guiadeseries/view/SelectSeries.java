@@ -13,7 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import br.com.martinsdev.guiadeseries.R;
-import br.com.martinsdev.guiadeseries.controller.TVShowDatabaseClient;
+import br.com.martinsdev.guiadeseries.controller.DatabaseClientTVShow;
 import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
 import br.com.martinsdev.guiadeseries.model.ListPages;
 import br.com.martinsdev.guiadeseries.model.Result;
@@ -26,7 +26,7 @@ import retrofit.Response;
 import retrofit.Retrofit;
 
 public class SelectSeries extends AppCompatActivity implements Callback {
-    TVShowDatabaseClient client = ServiceGenerator.createService(TVShowDatabaseClient.class);
+    DatabaseClientTVShow client = ServiceGenerator.createService(DatabaseClientTVShow.class);
     ArrayList<Result> results;
     ResultAdapter adapter;
     ListView listView;

@@ -1,5 +1,7 @@
-
 package br.com.martinsdev.guiadeseries.model;
+
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
-public class TVShow {
+public class TVShow implements Parcelable {
 
     private Boolean isWatched = false;
 
@@ -113,7 +115,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The backdropPath
      */
@@ -122,7 +124,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param backdropPath
      *     The backdrop_path
      */
@@ -131,7 +133,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The episodeRunTime
      */
@@ -140,7 +142,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param episodeRunTime
      *     The episode_run_time
      */
@@ -149,7 +151,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The firstAirDate
      */
@@ -158,7 +160,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param firstAirDate
      *     The first_air_date
      */
@@ -167,7 +169,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The genres
      */
@@ -176,7 +178,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param genres
      *     The genres
      */
@@ -185,7 +187,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The homepage
      */
@@ -194,7 +196,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param homepage
      *     The homepage
      */
@@ -203,7 +205,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The id
      */
@@ -212,7 +214,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param id
      *     The id
      */
@@ -221,7 +223,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The inProduction
      */
@@ -230,7 +232,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param inProduction
      *     The in_production
      */
@@ -239,7 +241,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The languages
      */
@@ -248,7 +250,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param languages
      *     The languages
      */
@@ -257,7 +259,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The lastAirDate
      */
@@ -266,7 +268,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param lastAirDate
      *     The last_air_date
      */
@@ -275,7 +277,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The name
      */
@@ -284,7 +286,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param name
      *     The name
      */
@@ -293,7 +295,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The numberOfEpisodes
      */
@@ -302,7 +304,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param numberOfEpisodes
      *     The number_of_episodes
      */
@@ -311,7 +313,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The numberOfSeasons
      */
@@ -320,7 +322,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param numberOfSeasons
      *     The number_of_seasons
      */
@@ -329,7 +331,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The originCountry
      */
@@ -338,7 +340,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param originCountry
      *     The origin_country
      */
@@ -347,7 +349,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The originalLanguage
      */
@@ -356,7 +358,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param originalLanguage
      *     The original_language
      */
@@ -365,7 +367,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The originalName
      */
@@ -374,7 +376,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param originalName
      *     The original_name
      */
@@ -383,7 +385,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The overview
      */
@@ -392,7 +394,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param overview
      *     The overview
      */
@@ -401,7 +403,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The popularity
      */
@@ -410,7 +412,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param popularity
      *     The popularity
      */
@@ -419,7 +421,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The posterPath
      */
@@ -428,7 +430,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param posterPath
      *     The poster_path
      */
@@ -437,7 +439,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The seasons
      */
@@ -446,7 +448,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param seasons
      *     The seasons
      */
@@ -455,7 +457,27 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
+     * @param position
+     *     The number of season
+     * @param season
+     *     The season
+     */
+    public void setSeason(int position, Season season) {
+        this.seasons.set(position - 1, season);
+    }
+
+    /**
+     *
+     * @param position
+     *     The number of season
+     */
+    public Season getSeason(int position) {
+        return this.seasons.get(position);
+    }
+
+    /**
+     *
      * @return
      *     The status
      */
@@ -464,7 +486,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param status
      *     The status
      */
@@ -473,7 +495,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The type
      */
@@ -482,7 +504,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param type
      *     The type
      */
@@ -491,7 +513,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The voteAverage
      */
@@ -500,7 +522,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param voteAverage
      *     The vote_average
      */
@@ -509,7 +531,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @return
      *     The voteCount
      */
@@ -518,7 +540,7 @@ public class TVShow {
     }
 
     /**
-     * 
+     *
      * @param voteCount
      *     The vote_count
      */
@@ -526,4 +548,167 @@ public class TVShow {
         this.voteCount = voteCount;
     }
 
+
+    protected TVShow(Parcel in) {
+        byte isWatchedVal = in.readByte();
+        isWatched = isWatchedVal == 0x02 ? null : isWatchedVal != 0x00;
+        backdropPath = in.readString();
+        if (in.readByte() == 0x01) {
+            episodeRunTime = new ArrayList<Integer>();
+            in.readList(episodeRunTime, Integer.class.getClassLoader());
+        } else {
+            episodeRunTime = null;
+        }
+        firstAirDate = in.readString();
+        if (in.readByte() == 0x01) {
+            genres = new ArrayList<Genre>();
+            in.readList(genres, Genre.class.getClassLoader());
+        } else {
+            genres = null;
+        }
+        homepage = in.readString();
+        id = in.readByte() == 0x00 ? null : in.readInt();
+        byte inProductionVal = in.readByte();
+        inProduction = inProductionVal == 0x02 ? null : inProductionVal != 0x00;
+        if (in.readByte() == 0x01) {
+            languages = new ArrayList<String>();
+            in.readList(languages, String.class.getClassLoader());
+        } else {
+            languages = null;
+        }
+        lastAirDate = in.readString();
+        name = in.readString();
+        numberOfEpisodes = in.readByte() == 0x00 ? null : in.readInt();
+        numberOfSeasons = in.readByte() == 0x00 ? null : in.readInt();
+        if (in.readByte() == 0x01) {
+            originCountry = new ArrayList<String>();
+            in.readList(originCountry, String.class.getClassLoader());
+        } else {
+            originCountry = null;
+        }
+        originalLanguage = in.readString();
+        originalName = in.readString();
+        overview = in.readString();
+        popularity = in.readByte() == 0x00 ? null : in.readDouble();
+        posterPath = in.readString();
+        if (in.readByte() == 0x01) {
+            seasons = new ArrayList<Season>();
+            in.readList(seasons, Season.class.getClassLoader());
+        } else {
+            seasons = null;
+        }
+        status = in.readString();
+        type = in.readString();
+        voteAverage = in.readByte() == 0x00 ? null : in.readDouble();
+        voteCount = in.readByte() == 0x00 ? null : in.readInt();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        if (isWatched == null) {
+            dest.writeByte((byte) (0x02));
+        } else {
+            dest.writeByte((byte) (isWatched ? 0x01 : 0x00));
+        }
+        dest.writeString(backdropPath);
+        if (episodeRunTime == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(episodeRunTime);
+        }
+        dest.writeString(firstAirDate);
+        if (genres == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(genres);
+        }
+        dest.writeString(homepage);
+        if (id == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeInt(id);
+        }
+        if (inProduction == null) {
+            dest.writeByte((byte) (0x02));
+        } else {
+            dest.writeByte((byte) (inProduction ? 0x01 : 0x00));
+        }
+        if (languages == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(languages);
+        }
+        dest.writeString(lastAirDate);
+        dest.writeString(name);
+        if (numberOfEpisodes == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeInt(numberOfEpisodes);
+        }
+        if (numberOfSeasons == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeInt(numberOfSeasons);
+        }
+        if (originCountry == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(originCountry);
+        }
+        dest.writeString(originalLanguage);
+        dest.writeString(originalName);
+        dest.writeString(overview);
+        if (popularity == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeDouble(popularity);
+        }
+        dest.writeString(posterPath);
+        if (seasons == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(seasons);
+        }
+        dest.writeString(status);
+        dest.writeString(type);
+        if (voteAverage == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeDouble(voteAverage);
+        }
+        if (voteCount == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeInt(voteCount);
+        }
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<TVShow> CREATOR = new Parcelable.Creator<TVShow>() {
+        @Override
+        public TVShow createFromParcel(Parcel in) {
+            return new TVShow(in);
+        }
+
+        @Override
+        public TVShow[] newArray(int size) {
+            return new TVShow[size];
+        }
+    };
 }

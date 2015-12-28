@@ -11,7 +11,7 @@ import retrofit.http.Query;
 /**
  * Created by gabriel on 08/12/15.
  */
-public interface TVShowDatabaseClient {
+public interface DatabaseClientTVShow {
     @GET("tv/popular")
     Call<ListPages> getPopularTvShows(
         @Query("page") int page

@@ -1,5 +1,7 @@
-
 package br.com.martinsdev.guiadeseries.model;
+
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("org.jsonschema2pojo")
-public class Episode {
+public class Episode implements Parcelable {
 
     @SerializedName("backdrop_path")
     @Expose
@@ -21,6 +23,14 @@ public class Episode {
     @SerializedName("first_air_date")
     @Expose
     private String firstAirDate;
+
+    @SerializedName("episode_number")
+    @Expose
+    private int episode_number;
+
+    @SerializedName("air_date")
+    @Expose
+    private String airDate;
 
     @SerializedName("genres")
     @Expose
@@ -94,16 +104,8 @@ public class Episode {
     @Expose
     private String type;
 
-    @SerializedName("vote_average")
-    @Expose
-    private Integer voteAverage;
-
-    @SerializedName("vote_count")
-    @Expose
-    private Integer voteCount;
-
     /**
-     * 
+     *
      * @return
      *     The backdropPath
      */
@@ -112,7 +114,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param backdropPath
      *     The backdrop_path
      */
@@ -121,7 +123,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The episodeRunTime
      */
@@ -130,7 +132,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param episodeRunTime
      *     The episode_run_time
      */
@@ -138,8 +140,16 @@ public class Episode {
         this.episodeRunTime = episodeRunTime;
     }
 
+    public int getEpisodeNumber() {
+        return episode_number;
+    }
+
+    public void setEpisodeNumber(int episode_number) {
+        this.episode_number = episode_number;
+    }
+
     /**
-     * 
+     *
      * @return
      *     The firstAirDate
      */
@@ -148,7 +158,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param firstAirDate
      *     The first_air_date
      */
@@ -157,7 +167,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The genres
      */
@@ -166,7 +176,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param genres
      *     The genres
      */
@@ -175,7 +185,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The homepage
      */
@@ -184,7 +194,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param homepage
      *     The homepage
      */
@@ -193,7 +203,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The id
      */
@@ -202,7 +212,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param id
      *     The id
      */
@@ -211,7 +221,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The inProduction
      */
@@ -220,7 +230,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param inProduction
      *     The in_production
      */
@@ -229,7 +239,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The languages
      */
@@ -238,7 +248,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param languages
      *     The languages
      */
@@ -247,7 +257,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The lastAirDate
      */
@@ -256,7 +266,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param lastAirDate
      *     The last_air_date
      */
@@ -265,7 +275,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The name
      */
@@ -274,7 +284,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param name
      *     The name
      */
@@ -283,7 +293,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The numberOfEpisodes
      */
@@ -292,7 +302,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param numberOfEpisodes
      *     The number_of_episodes
      */
@@ -301,7 +311,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The numberOfSeasons
      */
@@ -310,7 +320,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param numberOfSeasons
      *     The number_of_seasons
      */
@@ -319,7 +329,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The originCountry
      */
@@ -328,7 +338,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param originCountry
      *     The origin_country
      */
@@ -337,7 +347,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The originalLanguage
      */
@@ -346,7 +356,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param originalLanguage
      *     The original_language
      */
@@ -355,7 +365,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The originalName
      */
@@ -364,7 +374,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param originalName
      *     The original_name
      */
@@ -373,7 +383,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The overview
      */
@@ -382,7 +392,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param overview
      *     The overview
      */
@@ -391,7 +401,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The popularity
      */
@@ -400,7 +410,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param popularity
      *     The popularity
      */
@@ -409,7 +419,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The posterPath
      */
@@ -418,7 +428,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param posterPath
      *     The poster_path
      */
@@ -427,7 +437,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The seasons
      */
@@ -436,7 +446,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param seasons
      *     The seasons
      */
@@ -445,7 +455,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The status
      */
@@ -454,7 +464,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param status
      *     The status
      */
@@ -463,7 +473,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @return
      *     The type
      */
@@ -472,7 +482,7 @@ public class Episode {
     }
 
     /**
-     * 
+     *
      * @param type
      *     The type
      */
@@ -480,40 +490,82 @@ public class Episode {
         this.type = type;
     }
 
-    /**
-     * 
-     * @return
-     *     The voteAverage
-     */
-    public Integer getVoteAverage() {
-        return voteAverage;
+    public String getAirDate() {
+        return airDate;
     }
 
-    /**
-     * 
-     * @param voteAverage
-     *     The vote_average
-     */
-    public void setVoteAverage(Integer voteAverage) {
-        this.voteAverage = voteAverage;
+    public void setAirDate(String airDate) {
+        this.airDate = airDate;
     }
 
-    /**
-     * 
-     * @return
-     *     The voteCount
-     */
-    public Integer getVoteCount() {
-        return voteCount;
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    /**
-     * 
-     * @param voteCount
-     *     The vote_count
-     */
-    public void setVoteCount(Integer voteCount) {
-        this.voteCount = voteCount;
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.backdropPath);
+        dest.writeList(this.episodeRunTime);
+        dest.writeString(this.firstAirDate);
+        dest.writeString(this.airDate);
+        dest.writeTypedList(genres);
+        dest.writeString(this.homepage);
+        dest.writeValue(this.id);
+        dest.writeValue(this.inProduction);
+        dest.writeStringList(this.languages);
+        dest.writeString(this.lastAirDate);
+        dest.writeString(this.name);
+        dest.writeValue(this.numberOfEpisodes);
+        dest.writeValue(this.numberOfSeasons);
+        dest.writeStringList(this.originCountry);
+        dest.writeString(this.originalLanguage);
+        dest.writeString(this.originalName);
+        dest.writeString(this.overview);
+        dest.writeValue(this.popularity);
+        dest.writeString(this.posterPath);
+        dest.writeTypedList(seasons);
+        dest.writeString(this.status);
+        dest.writeString(this.type);
     }
 
+    public Episode() {
+    }
+
+    protected Episode(Parcel in) {
+        this.backdropPath = in.readString();
+        this.episodeRunTime = new ArrayList<Integer>();
+        in.readList(this.episodeRunTime, List.class.getClassLoader());
+        this.firstAirDate = in.readString();
+        this.airDate = in.readString();
+        this.genres = in.createTypedArrayList(Genre.CREATOR);
+        this.homepage = in.readString();
+        this.id = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.inProduction = (Boolean) in.readValue(Boolean.class.getClassLoader());
+        this.languages = in.createStringArrayList();
+        this.lastAirDate = in.readString();
+        this.name = in.readString();
+        this.numberOfEpisodes = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.numberOfSeasons = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.originCountry = in.createStringArrayList();
+        this.originalLanguage = in.readString();
+        this.originalName = in.readString();
+        this.overview = in.readString();
+        this.popularity = (Double) in.readValue(Double.class.getClassLoader());
+        this.posterPath = in.readString();
+        this.seasons = in.createTypedArrayList(Season.CREATOR);
+        this.status = in.readString();
+        this.type = in.readString();
+    }
+
+    public static final Creator<Episode> CREATOR = new Creator<Episode>() {
+        public Episode createFromParcel(Parcel source) {
+            return new Episode(source);
+        }
+
+        public Episode[] newArray(int size) {
+            return new Episode[size];
+        }
+    };
 }
