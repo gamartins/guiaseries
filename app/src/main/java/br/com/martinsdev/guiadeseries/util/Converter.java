@@ -28,4 +28,9 @@ public class Converter {
         String str = sb.toString();
         return str;
     }
+
+    static public String twoDigitNumber(int num){
+        String twoDigitNum = (num < 10 ? "0" : "") + num;
+        return twoDigitNum;
+    }
 }

@@ -548,6 +548,15 @@ public class TVShow implements Parcelable {
         this.voteCount = voteCount;
     }
 
+    /**
+     * Remove the extras season from the list of seasons
+     */
+    public void removeExtraSeason(){
+        if (getSeason(0).getSeasonNumber() == 0) {
+            this.seasons.remove(0);
+        }
+    }
+
 
     protected TVShow(Parcel in) {
         byte isWatchedVal = in.readByte();

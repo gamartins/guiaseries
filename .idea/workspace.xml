@@ -12,6 +12,16 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable_item.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_selected_series_item_list.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -25,23 +35,18 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Guia" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e92f749-9aee-4948-9ec6-0647924ea9ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/controller/DatabaseClientSeason.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/DetailedSeries.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/controller/TVShowDatabaseClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/controller/DatabaseClientTVShow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/SeasonAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Episode.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Episode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/FollowedSeries.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/FollowedSeries.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Genre.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Genre.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Season.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Season.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/SelectSeries.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/SelectSeries.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/DetailedSeries.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/DetailedSeries.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/TVShow.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/TVShow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/TvShowAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/TvShowAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="guiaseries.iws" />
@@ -63,124 +68,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DetailedSeries.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/DetailedSeries.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57968473">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-              <folding>
-                <element signature="e#2143#2144#0" expanded="true" />
-                <element signature="e#2198#2199#0" expanded="true" />
-                <marker date="1451306521763" expanded="true" signature="1643:2081" placeholder="..." />
-              </folding>
-            </state>
+      <file leaf-file-name="activity_detailed_series_expandable.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable.xml">
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TVShow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/TVShow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="475" column="41" selection-start-line="475" selection-start-column="41" selection-end-line="475" selection-end-column="41" />
-              <folding>
-                <element signature="e#408#440#0" expanded="false" />
-                <element signature="e#491#526#0" expanded="false" />
-                <element signature="e#613#646#0" expanded="false" />
-                <element signature="e#697#722#0" expanded="false" />
-                <element signature="e#797#824#0" expanded="false" />
-                <element signature="e#871#892#0" expanded="false" />
-                <element signature="e#934#966#0" expanded="false" />
-                <element signature="e#1018#1046#0" expanded="false" />
-                <element signature="e#1126#1158#0" expanded="false" />
-                <element signature="e#1208#1231#0" expanded="false" />
-                <element signature="e#1274#1311#0" expanded="false" />
-                <element signature="e#1458#1491#0" expanded="false" />
-                <element signature="e#1575#1611#0" expanded="false" />
-                <element signature="e#1666#1698#0" expanded="false" />
-                <element signature="e#1749#1776#0" expanded="false" />
-                <element signature="e#1823#1852#0" expanded="false" />
-                <element signature="e#1901#1931#0" expanded="false" />
-                <element signature="e#2084#2109#0" expanded="false" />
-                <element signature="e#2154#2177#0" expanded="false" />
-                <element signature="e#2220#2251#0" expanded="false" />
-                <element signature="e#2301#2330#0" expanded="false" />
-                <element signature="docComment;method#getBackdropPath#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setBackdropPath#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getEpisodeRunTime#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setEpisodeRunTime#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getFirstAirDate#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setFirstAirDate#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getGenres#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setGenres#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getHomepage#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setHomepage#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getId#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setId#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getInProduction#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setInProduction#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getLanguages#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setLanguages#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getLastAirDate#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setLastAirDate#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getName#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setName#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getNumberOfEpisodes#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setNumberOfEpisodes#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getNumberOfSeasons#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setNumberOfSeasons#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getOriginCountry#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setOriginCountry#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getOriginalLanguage#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setOriginalLanguage#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getOriginalName#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setOriginalName#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getOverview#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setOverview#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getPopularity#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setPopularity#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getPosterPath#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setPosterPath#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getSeasons#0;class#TVShow#0" expanded="false" />
-                <element signature="e#8813#8814#0" expanded="true" />
-                <element signature="e#8862#8863#0" expanded="true" />
-                <element signature="docComment;method#getStatus#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setStatus#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getType#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setType#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getVoteAverage#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setVoteAverage#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#getVoteCount#0;class#TVShow#0" expanded="false" />
-                <element signature="docComment;method#setVoteCount#0;class#TVShow#0" expanded="false" />
-                <element signature="method#TVShow#0;class#TVShow#0" expanded="false" />
-                <element signature="method#writeToParcel#0;class#TVShow#0" expanded="false" />
-                <element signature="class#15214:15476" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Season.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Season.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-              <folding>
-                <element signature="e#414#446#0" expanded="false" />
-                <element signature="e#498#519#0" expanded="false" />
-                <element signature="e#561#591#0" expanded="false" />
-                <element signature="e#640#672#0" expanded="false" />
-                <element signature="e#724#751#0" expanded="false" />
-                <element signature="e#808#831#0" expanded="false" />
-                <element signature="docComment;method#getAirDate#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#setAirDate#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#getEpisodeCount#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#setEpisodeCount#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#getId#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#setId#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#getPosterPath#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#setPosterPath#0;class#Season#0" expanded="false" />
-                <element signature="docComment;method#getSeasonNumber#0;class#Season#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.54347825">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,9 +87,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
+        <option value="Interface" />
         <option value="layoutResourceFile_vertical" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -1754,7 +1650,6 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/circle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_list_series.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_added_series.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/AddedSeries.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/DataStorage.java" />
@@ -1767,16 +1662,22 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_select_series.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/FollowedSeries.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_followed_series.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Result.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Genre.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/TvShowAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/controller/DatabaseClientEpisode.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/controller/DatabaseClientSeason.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Season.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/TVShow.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Episode.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/TVShow.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/DetailedSeries.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/SeasonAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable.xml" />
       </list>
     </option>
   </component>
@@ -1819,7 +1720,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1837,6 +1737,28 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guiaseries" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1860,63 +1782,11 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guiadeseries" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guiaseries" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guiadeseries" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guiaseries" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guiadeseries" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -2018,13 +1888,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.57.101:5555" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0012436844" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
@@ -2227,7 +2098,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="30" width="1368" height="739" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2237,7 +2108,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4464883" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4464883" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924472" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2245,7 +2117,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23489426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2257,7 +2129,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924472" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2277,46 +2148,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="9" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_followed_series.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/FollowedSeries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_select_series.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_followed_series.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2380,13 +2216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68301225">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -2472,41 +2301,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_select_series.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_followed_series.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78809106">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2556,7 +2354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23642732">
           <caret line="18" column="75" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2578,7 +2375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47285464">
           <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2600,7 +2396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2608,7 +2403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2616,7 +2410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3310811">
           <caret line="2386" column="0" selection-start-line="2386" selection-start-column="0" selection-end-line="2386" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2631,14 +2424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33274958">
           <caret line="310" column="13" selection-start-line="310" selection-start-column="13" selection-end-line="310" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Episode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43782836">
-          <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -2646,115 +2431,124 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-          <folding>
-            <element signature="e#414#446#0" expanded="false" />
-            <element signature="e#498#519#0" expanded="false" />
-            <element signature="e#561#591#0" expanded="false" />
-            <element signature="e#640#672#0" expanded="false" />
-            <element signature="e#724#751#0" expanded="false" />
-            <element signature="e#808#831#0" expanded="false" />
-            <element signature="docComment;method#getAirDate#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#setAirDate#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#getEpisodeCount#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#setEpisodeCount#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#getId#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#setId#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#getPosterPath#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#setPosterPath#0;class#Season#0" expanded="false" />
-            <element signature="docComment;method#getSeasonNumber#0;class#Season#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-23/android/widget/ExpandableListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33274958">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/TVShow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="475" column="41" selection-start-line="475" selection-start-column="41" selection-end-line="475" selection-end-column="41" />
+          <caret line="556" column="9" selection-start-line="556" selection-start-column="9" selection-end-line="556" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63047284">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.923077">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_select_series.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.262697">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13812155">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5248619">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Episode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43257442">
+          <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
           <folding>
-            <element signature="e#408#440#0" expanded="false" />
-            <element signature="e#491#526#0" expanded="false" />
-            <element signature="e#613#646#0" expanded="false" />
-            <element signature="e#697#722#0" expanded="false" />
-            <element signature="e#797#824#0" expanded="false" />
-            <element signature="e#871#892#0" expanded="false" />
-            <element signature="e#934#966#0" expanded="false" />
-            <element signature="e#1018#1046#0" expanded="false" />
-            <element signature="e#1126#1158#0" expanded="false" />
-            <element signature="e#1208#1231#0" expanded="false" />
-            <element signature="e#1274#1311#0" expanded="false" />
-            <element signature="e#1458#1491#0" expanded="false" />
-            <element signature="e#1575#1611#0" expanded="false" />
-            <element signature="e#1666#1698#0" expanded="false" />
-            <element signature="e#1749#1776#0" expanded="false" />
-            <element signature="e#1823#1852#0" expanded="false" />
-            <element signature="e#1901#1931#0" expanded="false" />
-            <element signature="e#2084#2109#0" expanded="false" />
-            <element signature="e#2154#2177#0" expanded="false" />
-            <element signature="e#2220#2251#0" expanded="false" />
-            <element signature="e#2301#2330#0" expanded="false" />
-            <element signature="docComment;method#getBackdropPath#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setBackdropPath#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getEpisodeRunTime#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setEpisodeRunTime#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getFirstAirDate#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setFirstAirDate#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getGenres#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setGenres#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getHomepage#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setHomepage#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getId#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setId#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getInProduction#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setInProduction#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getLanguages#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setLanguages#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getLastAirDate#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setLastAirDate#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getName#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setName#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getNumberOfEpisodes#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setNumberOfEpisodes#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getNumberOfSeasons#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setNumberOfSeasons#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getOriginCountry#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setOriginCountry#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getOriginalLanguage#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setOriginalLanguage#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getOriginalName#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setOriginalName#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getOverview#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setOverview#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getPopularity#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setPopularity#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getPosterPath#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setPosterPath#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getSeasons#0;class#TVShow#0" expanded="false" />
-            <element signature="e#8813#8814#0" expanded="true" />
-            <element signature="e#8862#8863#0" expanded="true" />
-            <element signature="docComment;method#getStatus#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setStatus#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getType#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setType#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getVoteAverage#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setVoteAverage#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#getVoteCount#0;class#TVShow#0" expanded="false" />
-            <element signature="docComment;method#setVoteCount#0;class#TVShow#0" expanded="false" />
-            <element signature="method#TVShow#0;class#TVShow#0" expanded="false" />
-            <element signature="method#writeToParcel#0;class#TVShow#0" expanded="false" />
-            <element signature="class#15214:15476" expanded="false" />
+            <element signature="e#3133#3134#0" expanded="true" />
+            <element signature="e#3185#3186#0" expanded="true" />
+            <element signature="docComment;method#getFirstAirDate#0;class#Episode#0" expanded="false" />
+            <element signature="docComment;method#setFirstAirDate#0;class#Episode#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/SeasonAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55341506">
+          <caret line="90" column="87" selection-start-line="90" selection-start-column="87" selection-end-line="90" selection-end-column="87" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/DetailedSeries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57968473">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state vertical-scroll-proportion="1.0245184">
+          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
           <folding>
-            <element signature="e#2143#2144#0" expanded="true" />
-            <element signature="e#2198#2199#0" expanded="true" />
-            <marker date="1451306521763" expanded="true" signature="1643:2081" placeholder="..." />
+            <element signature="method#onResponse#0;class#DetailedSeries#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36777583">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54347825">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -14,11 +14,17 @@
         <activity android:name=".view.FollowedSeries">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.DetailedSeries"></activity>
+        <activity
+            android:name=".view.DetailedSeries"
+            android:parentActivityName=".view.FollowedSeries">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.martinsdev.guiadeseries.view.FollowedSeries" />
+        </activity>
     </application>
 
 </manifest>
