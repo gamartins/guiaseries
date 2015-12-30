@@ -12,6 +12,8 @@ import com.google.gson.annotations.SerializedName;
 @Generated("org.jsonschema2pojo")
 public class Episode implements Parcelable {
 
+    private Boolean watched;
+
     @SerializedName("backdrop_path")
     @Expose
     private String backdropPath;
@@ -103,6 +105,27 @@ public class Episode implements Parcelable {
     @SerializedName("type")
     @Expose
     private String type;
+
+    public Boolean isWatched() {
+        if (watched != null) {
+            return watched;
+        } else {
+            this.watched = false;
+            return watched;
+        }
+    }
+
+    public void setWatched(Boolean watched) {
+        this.watched = watched;
+    }
+
+    public int getEpisode_number() {
+        return episode_number;
+    }
+
+    public void setEpisode_number(int episode_number) {
+        this.episode_number = episode_number;
+    }
 
     /**
      *

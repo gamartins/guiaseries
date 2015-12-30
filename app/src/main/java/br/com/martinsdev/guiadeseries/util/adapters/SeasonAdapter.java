@@ -1,10 +1,14 @@
 package br.com.martinsdev.guiadeseries.util.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -12,6 +16,7 @@ import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.model.Episode;
 import br.com.martinsdev.guiadeseries.model.Season;
 import br.com.martinsdev.guiadeseries.util.Converter;
+import br.com.martinsdev.guiadeseries.util.DataStorage;
 
 /**
  * Created by gabriel on 28/12/15.
@@ -19,10 +24,14 @@ import br.com.martinsdev.guiadeseries.util.Converter;
 public class SeasonAdapter extends BaseExpandableListAdapter {
     private Context context;
     private List<Season> seasonList;
+    private String listName;
+    private DataStorage storage;
 
-    public SeasonAdapter(Context context, List<Season> seasonList) {
+    public SeasonAdapter(Context context, List<Season> seasonList, int serieID) {
         this.context = context;
         this.seasonList = seasonList;
+        this.listName = "serie_ID" + serieID;
+        this.storage = new DataStorage(context, listName);
     }
 
     @Override
@@ -54,7 +63,9 @@ public class SeasonAdapter extends BaseExpandableListAdapter {
 
     @Override
     public long getChildId(int groupPosition, int childPosition) {
-        return childPosition;
+//        return childPosition;
+        long chilId = ( groupPosition + 1 ) * childPosition;
+        return chilId;
     }
 
     @Override
@@ -83,13 +94,39 @@ public class SeasonAdapter extends BaseExpandableListAdapter {
         }
 
         List<Episode> episodeList = getEpisodeList(groupPosition);
-        Episode episode = episodeList.get(childPosition);
+        final Episode episode = episodeList.get(childPosition);
 
         TextView episodeNumber = (TextView) convertView.findViewById(R.id.detailed_series_episode_number);
         TextView episodeName = (TextView) convertView.findViewById(R.id.detailed_series_episode_name);
+        final CheckBox watched = (CheckBox) convertView.findViewById(R.id.detailed_series_episode_checkbox);
+
+        if (storage.searchItem(episode.getId())) {
+            watched.setChecked(true);
+            episode.setWatched(true);
+        }
 
         episodeNumber.setText(Converter.twoDigitNumber(episode.getEpisodeNumber()) + ".");
         episodeName.setText(episode.getName());
+
+        watched.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (watched.isChecked()) {
+                    storage.add(episode.getId());
+                    episode.setWatched(true);
+                } else {
+                    storage.remove(episode.getId());
+                    episode.setWatched(false);
+                }
+            }
+        });
+
+        // Evita que novos CheckBoxes se sejam marcados visiveis devido ao RecycleView do ArrayAdapter
+        if (episode.isWatched()){
+            watched.setChecked(true);
+        } else {
+            watched.setChecked(false);
+        }
 
         return convertView;
     }

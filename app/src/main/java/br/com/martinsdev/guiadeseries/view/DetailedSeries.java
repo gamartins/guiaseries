@@ -53,7 +53,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback {
 
         setTitle(tvShow.getName());
 
-        adapter = new SeasonAdapter(getBaseContext(), tvShow.getSeasons());
+        adapter = new SeasonAdapter(getBaseContext(), tvShow.getSeasons(), tvShow.getId());
         listView.setAdapter(adapter);
 
         // Inserindo os episódios de um temporada em um TVShow

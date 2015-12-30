@@ -27,14 +27,15 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
     private GridView gridViewSeries;
     private DataStorage storage;
     private TvShowAdapter showAdapter;
+    private String listName = "seriesID";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_followed_series);
 
-        storage = new DataStorage(this);
-        listSeriesId = storage.getListSeries();
+        storage = new DataStorage(this, listName);
+        listSeriesId = storage.getList();
         tvShowArrayList = new ArrayList<TVShow>();
         showAdapter = new TvShowAdapter(this, tvShowArrayList);
 

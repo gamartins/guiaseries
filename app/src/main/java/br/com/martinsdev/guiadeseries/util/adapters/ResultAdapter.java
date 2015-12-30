@@ -24,11 +24,12 @@ import br.com.martinsdev.guiadeseries.util.DataStorage;
  */
 public class ResultAdapter extends ArrayAdapter<Result>{
     private String baseURL = "http://image.tmdb.org/t/p/w154";
+    private String listName = "seriesID";
     private DataStorage storage;
 
     public ResultAdapter(Context context, ArrayList<Result> results) {
         super(context, R.layout.activity_selected_series_item_list, results);
-        storage = new DataStorage(context);
+        storage = new DataStorage(context, listName);
     }
 
     @Override
@@ -62,13 +63,13 @@ public class ResultAdapter extends ArrayAdapter<Result>{
                     addSerieIcon.setVisibility(View.VISIBLE);
 
                     // Serie removida das configurações do aplicativo
-                    storage.addSeries(result.getId());
+                    storage.add(result.getId());
                 } else {
                         result.setWatched(false);
                     addSerieIcon.setVisibility(View.INVISIBLE);
 
                     // Serie removida das configurações do aplicativo
-                    storage.removeSeries(result.getId());
+                    storage.remove(result.getId());
                 }
             }
         });

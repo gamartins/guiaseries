@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textSize="16sp"
+        android:text="#Num"
         android:id="@+id/detailed_series_episode_number"
         android:layout_marginRight="5dp"/>
 
@@ -18,5 +19,20 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textSize="16sp"
-        android:id="@+id/detailed_series_episode_name" />
-</LinearLayout>
+        android:id="@+id/detailed_series_episode_name"
+        android:text="Nome da Serie"
+        android:layout_alignTop="@+id/detailed_series_episode_number"
+        android:layout_toRightOf="@+id/detailed_series_episode_number"
+        android:layout_toEndOf="@+id/detailed_series_episode_number" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailed_series_episode_checkbox"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
