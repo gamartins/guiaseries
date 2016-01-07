@@ -15,14 +15,19 @@ import java.util.ArrayList;
 
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.model.TVShow;
+import br.com.martinsdev.guiadeseries.util.Converter;
 import br.com.martinsdev.guiadeseries.view.DetailedSeries;
 
 /**
  * Created by gabriel on 21/12/15.
  */
 public class TvShowAdapter extends ArrayAdapter<TVShow> {
-    public TvShowAdapter(Context context, ArrayList<TVShow> tvShows) {
-        super(context, R.layout.activity_followed_series_item_list, tvShows);
+    // Usado para identificar a activity (0 = FollowedSeries.java e 1 = NewEpisodeSeries.java
+    int activity_id;
+
+    public TvShowAdapter(Context context, ArrayList<TVShow> tvShows, int activity_id) {
+        super(context, R.layout.activity_series_item_list, tvShows);
+        this.activity_id = activity_id;
     }
 
     @Override
@@ -32,15 +37,25 @@ public class TvShowAdapter extends ArrayAdapter<TVShow> {
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext())
-                    .inflate(R.layout.activity_followed_series_item_list, parent, false);
+                    .inflate(R.layout.activity_series_item_list, parent, false);
         }
 
         ImageView poster = (ImageView) convertView.findViewById(R.id.followed_poster);
-        TextView textView = (TextView) convertView.findViewById(R.id.folowed_name);
+        TextView name = (TextView) convertView.findViewById(R.id.folowed_name);
+        TextView watchedEpisodes = (TextView) convertView.findViewById(R.id.unwatched_episodes);
+
+        if (activity_id == 1){
+            watchedEpisodes.setVisibility(View.VISIBLE);
+            watchedEpisodes.setText(Converter.intToString(tvShow.getUnwatchedEpisodes()));
+
+            if (tvShow.getUnwatchedEpisodes() > 99) {
+                watchedEpisodes.setTextSize(14);
+            }
+        }
 
         String imagePath = baseURL + tvShow.getPosterPath();
 
-        textView.setText(tvShow.getName());
+        name.setText(tvShow.getName());
         Picasso.with(getContext()).load(imagePath).resize(120, 180).centerCrop().into(poster);
 
         // Exibir os detalhes da serie clicada

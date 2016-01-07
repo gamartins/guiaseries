@@ -3,6 +3,7 @@ package br.com.martinsdev.guiadeseries.util;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by gabriel on 09/12/15.

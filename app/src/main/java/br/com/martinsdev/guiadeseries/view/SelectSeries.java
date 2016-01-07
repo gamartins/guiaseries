@@ -74,9 +74,13 @@ public class SelectSeries extends AppCompatActivity implements Callback {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.followed_search_button:
+            case R.id.followed_menu_item:
                 Intent intent = new Intent(this, FollowedSeries.class);
                 startActivity(intent);
+                break;
+            case R.id.new_episode_menu_item:
+                Intent newEpisodes = new Intent(this, NewEpisodeSeries.class);
+                startActivity(newEpisodes);
                 break;
         }
 

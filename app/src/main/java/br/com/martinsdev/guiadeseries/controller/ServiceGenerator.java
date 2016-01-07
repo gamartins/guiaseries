@@ -16,7 +16,7 @@ import retrofit.Retrofit;
  */
 public class ServiceGenerator {
     private static final String API_BASE_URL = "http://api.themoviedb.org/3/";
-    private static final String api_key = "176b0a42041cf5fddf3647fec27eeff5";
+    private static final String API_KEY = "176b0a42041cf5fddf3647fec27eeff5";
 
     private static OkHttpClient httpClient = new OkHttpClient();
     private static Retrofit.Builder builder =
@@ -24,20 +24,40 @@ public class ServiceGenerator {
                     .baseUrl(API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create());
 
-    public static <S> S createService(Class<S> serviceClass) {
-        if (api_key != null){
+    /*public static <S> S createService(Class<S> serviceClass) {
+        // Inserindo a API_KEY em todas as requisições
+        httpClient.interceptors().add(new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                Request request = chain.request();
+                HttpUrl url = request.httpUrl()
+                        .newBuilder()
+                        .addQueryParameter("api_key", API_KEY)
+                        .build();
 
-            // Inserindo a api_key em todas as requisições
+                request = request.newBuilder().url(url).build();
+                return chain.proceed(request);
+            }
+        });
+
+        Retrofit retrofit = builder.client(httpClient).build();
+        return retrofit.create(serviceClass);
+    }*/
+
+    public static <S> S createService(Class<S> serviceClass) {
+        if (API_KEY != null) {
+            httpClient.interceptors().clear();
             httpClient.interceptors().add(new Interceptor() {
                 @Override
-                public Response intercept(Chain chain) throws IOException {
-                    Request request = chain.request();
-                    HttpUrl url = request.httpUrl()
-                            .newBuilder()
-                            .addQueryParameter("api_key", api_key)
-                            .build();
-                    request = request.newBuilder().url(url).build();
+                public Response intercept(Interceptor.Chain chain) throws IOException {
+                    Request original = chain.request();
+                    HttpUrl url = chain.request().httpUrl().newBuilder()
+                            .addQueryParameter("api_key", API_KEY).build();
+                    Request.Builder requestBuilder = original.newBuilder()
+                            .url(url)
+                            .method(original.method(), original.body());
 
+                    Request request = requestBuilder.build();
                     return chain.proceed(request);
                 }
             });

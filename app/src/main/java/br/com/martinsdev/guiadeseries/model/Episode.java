@@ -3,7 +3,10 @@ package br.com.martinsdev.guiadeseries.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
@@ -520,7 +523,6 @@ public class Episode implements Parcelable {
     public void setAirDate(String airDate) {
         this.airDate = airDate;
     }
-
 
     @Override
     public int describeContents() {

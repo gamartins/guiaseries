@@ -12,6 +12,8 @@ import com.google.gson.annotations.SerializedName;
 @Generated("org.jsonschema2pojo")
 public class TVShow implements Parcelable {
 
+    private Integer unwatchedEpisodes;
+
     private Boolean isWatched = false;
 
     @SerializedName("backdrop_path")
@@ -105,6 +107,18 @@ public class TVShow implements Parcelable {
     @SerializedName("vote_count")
     @Expose
     private Integer voteCount;
+
+    public Integer getUnwatchedEpisodes() {
+        if (this.unwatchedEpisodes == null){
+            this.unwatchedEpisodes = numberOfEpisodes;
+        }
+
+        return unwatchedEpisodes;
+    }
+
+    public void setUnwatchedEpisodes(int unwatchedEpisodes) {
+        this.unwatchedEpisodes = unwatchedEpisodes;
+    }
 
     public Boolean getIsWatched() {
         return isWatched;

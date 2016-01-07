@@ -32,12 +32,12 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_followed_series);
+        setContentView(R.layout.activity_series);
 
         storage = new DataStorage(this, listName);
         listSeriesId = storage.getList();
         tvShowArrayList = new ArrayList<TVShow>();
-        showAdapter = new TvShowAdapter(this, tvShowArrayList);
+        showAdapter = new TvShowAdapter(this, tvShowArrayList, 0);
 
         gridViewSeries = (GridView) findViewById(R.id.followed_series);
         gridViewSeries.setAdapter(showAdapter);
@@ -57,9 +57,14 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.search_button:
-                Intent intent = new Intent(this, SelectSeries.class);
-                startActivity(intent);
+            case R.id.add_serie_menu_item:
+                Intent selectSeries = new Intent(this, SelectSeries.class);
+                startActivity(selectSeries);
+                break;
+            case R.id.new_episode_menu_item:
+                Intent newEpisodes = new Intent(this, NewEpisodeSeries.class);
+                startActivity(newEpisodes);
+                break;
         }
 
         return super.onOptionsItemSelected(item);

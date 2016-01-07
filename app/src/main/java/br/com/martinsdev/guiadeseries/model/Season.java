@@ -7,7 +7,12 @@ import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 @Generated("org.jsonschema2pojo")
 public class Season implements Parcelable {
@@ -72,7 +77,12 @@ public class Season implements Parcelable {
      *     The episodeCount
      */
     public Integer getEpisodeCount() {
-        return episodeCount;
+        if (episodeList == null){
+            return episodeCount;
+        } else {
+            return episodeList.size();
+        }
+
     }
 
     /**
@@ -146,6 +156,9 @@ public class Season implements Parcelable {
         this.episodeList = episodeList;
     }
 
+    public Season() {
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -160,9 +173,6 @@ public class Season implements Parcelable {
         dest.writeValue(this.seasonNumber);
         dest.writeTypedList(episodeList);
         dest.writeString(this.name);
-    }
-
-    public Season() {
     }
 
     protected Season(Parcel in) {

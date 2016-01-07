@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="br.com.martinsdev.guiadeseries.view.SelectSeries">
+    tools:context="br.com.martinsdev.guiadeseries.view.NewEpisodeSeries">
 
     <item
-        android:id="@+id/new_episode_menu_item"
-        android:icon="@drawable/ic_new_episode_series_24dp"
-        android:title="search_button"
+        android:id="@+id/followed_menu_item"
+        android:icon="@drawable/ic_visibility_white_24dp"
+        android:title="followed_series_button"
         app:showAsAction="always" />
 
     <item

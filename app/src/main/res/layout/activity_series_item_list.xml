@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="210dp"
+            android:background="#f7e304"
+            android:layout_gravity="center"
+            android:id="@+id/followed_poster" />
+
+        <TextView
+            android:id="@+id/unwatched_episodes"
+            android:text="12"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/circle_shape"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="90dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:elevation="6dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/folowed_name"
+        android:text="Nome da Serie"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
