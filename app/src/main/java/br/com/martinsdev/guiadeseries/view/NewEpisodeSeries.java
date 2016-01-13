@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -14,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
@@ -24,6 +26,7 @@ import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
 import br.com.martinsdev.guiadeseries.model.Episode;
 import br.com.martinsdev.guiadeseries.model.Season;
 import br.com.martinsdev.guiadeseries.model.TVShow;
+import br.com.martinsdev.guiadeseries.util.Converter;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
 import br.com.martinsdev.guiadeseries.util.adapters.TvShowAdapter;
 import retrofit.Call;
@@ -156,5 +159,46 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
     @Override
     public void onFailure(Throwable t) {
         Log.e("Retrofit", t.getLocalizedMessage());
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == TvShowAdapter.REQUEST_CODE) {
+            TVShow show = data.getExtras().getParcelable("tvShow");
+
+            // Caso a serie tenha sido deletada
+            if (resultCode == DetailedSeries.RESULT_DELETED) {
+                DataStorage storage = new DataStorage(this,listName);
+                listSeriesId = storage.getList();
+
+                for (Iterator<TVShow> iterator = tvShowArrayList.iterator(); iterator.hasNext();){
+                    TVShow tempShow = iterator.next();
+
+                    if(!listSeriesId.contains(Converter.intToString(tempShow.getId()))){
+                        iterator.remove();
+                    }
+                }
+
+                Toast.makeText(this, "Show " + show.getName() + " removed.", Toast.LENGTH_LONG).show();
+                showAdapter.notifyDataSetChanged();
+
+            } else { // Caso a serie tenha sido modificada
+
+                int indexOf = -1;
+                for (TVShow tempShow : tvShowArrayList) {
+                    if (show.getId().equals(tempShow.getId())) {
+                        indexOf = tvShowArrayList.indexOf(tempShow);
+                        DataStorage watchedEpisodeStorage = new DataStorage(
+                                getApplicationContext(), "serie_ID" + show.getId());
+                        show.setUnwatchedEpisodes(
+                                show.getUnwatchedEpisodes() - watchedEpisodeStorage.getList().size());
+                    }
+                }
+
+                tvShowArrayList.set(indexOf, show);
+                showAdapter.notifyDataSetChanged();
+
+            }
+        }
     }
 }

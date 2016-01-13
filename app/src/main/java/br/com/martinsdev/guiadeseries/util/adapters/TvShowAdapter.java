@@ -1,5 +1,6 @@
 package br.com.martinsdev.guiadeseries.util.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -23,7 +24,8 @@ import br.com.martinsdev.guiadeseries.view.DetailedSeries;
  */
 public class TvShowAdapter extends ArrayAdapter<TVShow> {
     // Usado para identificar a activity (0 = FollowedSeries.java e 1 = NewEpisodeSeries.java
-    int activity_id;
+    private int activity_id;
+    public static final int REQUEST_CODE = 1;
 
     public TvShowAdapter(Context context, ArrayList<TVShow> tvShows, int activity_id) {
         super(context, R.layout.activity_series_item_list, tvShows);
@@ -64,7 +66,8 @@ public class TvShowAdapter extends ArrayAdapter<TVShow> {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DetailedSeries.class);
                 intent.putExtra("tvShow", tvShow);
-                getContext().startActivity(intent);
+
+                ((Activity) getContext()).startActivityForResult(intent, REQUEST_CODE);
             }
         });
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.com.martinsdev.guiadeseries.view.DetailedSeries">
+
+    <item
+        android:id="@+id/remove_episode_menu_item"
+        android:icon="@drawable/ic_remove_serie_24dp"
+        android:title="Remover"
+        app:showAsAction="always" />
+
+</menu>

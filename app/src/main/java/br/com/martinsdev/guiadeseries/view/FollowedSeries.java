@@ -3,16 +3,20 @@ package br.com.martinsdev.guiadeseries.view;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
 import br.com.martinsdev.guiadeseries.controller.DatabaseClientTVShow;
 import br.com.martinsdev.guiadeseries.model.TVShow;
+import br.com.martinsdev.guiadeseries.util.Converter;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
 import br.com.martinsdev.guiadeseries.util.adapters.TvShowAdapter;
 import retrofit.Call;
@@ -36,7 +40,7 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
 
         storage = new DataStorage(this, listName);
         listSeriesId = storage.getList();
-        tvShowArrayList = new ArrayList<TVShow>();
+        tvShowArrayList = new ArrayList<>();
         showAdapter = new TvShowAdapter(this, tvShowArrayList, 0);
 
         gridViewSeries = (GridView) findViewById(R.id.followed_series);
@@ -80,5 +84,22 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
     @Override
     public void onFailure(Throwable t) {
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == TvShowAdapter.REQUEST_CODE) {
+            listSeriesId = storage.getList();
+            for (Iterator<TVShow> iterator = tvShowArrayList.iterator(); iterator.hasNext();){
+                TVShow show = iterator.next();
+
+                if(!listSeriesId.contains(Converter.intToString(show.getId()))){
+                    iterator.remove();
+                    Toast.makeText(this, "Show " + show.getName() + " removed.", Toast.LENGTH_LONG).show();
+                }
+            }
+            
+            showAdapter.notifyDataSetChanged();
+        }
     }
 }
