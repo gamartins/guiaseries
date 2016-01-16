@@ -30,9 +30,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/detailed_series_episode_checkbox"
         android:checked="false"
+        android:enabled="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-
 </RelativeLayout>

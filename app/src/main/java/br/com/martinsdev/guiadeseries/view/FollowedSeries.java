@@ -98,7 +98,7 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
                     Toast.makeText(this, "Show " + show.getName() + " removed.", Toast.LENGTH_LONG).show();
                 }
             }
-            
+
             showAdapter.notifyDataSetChanged();
         }
     }

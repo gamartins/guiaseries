@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
@@ -16,6 +16,7 @@ import com.google.gson.annotations.SerializedName;
 public class Episode implements Parcelable {
 
     private Boolean watched;
+    private Calendar today = Calendar.getInstance();
 
     @SerializedName("backdrop_path")
     @Expose
@@ -306,7 +307,11 @@ public class Episode implements Parcelable {
      *     The name
      */
     public String getName() {
-        return name;
+        if (name.equals("")){
+            return "Episode " + episode_number;
+        } else {
+            return name;
+        }
     }
 
     /**
@@ -522,6 +527,29 @@ public class Episode implements Parcelable {
 
     public void setAirDate(String airDate) {
         this.airDate = airDate;
+    }
+
+    public boolean isAired(){
+        Calendar dateAired;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+        if (getAirDate() != null) {
+            try {
+                dateAired = Calendar.getInstance();
+                dateAired.setTime(sdf.parse(getAirDate()));
+
+                if (dateAired.after(today)){
+                    return false;
+                } else {
+                    return true;
+                }
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return false;
     }
 
     @Override

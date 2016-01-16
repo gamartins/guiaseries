@@ -10,6 +10,9 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import br.com.martinsdev.guiadeseries.R;
@@ -106,7 +109,26 @@ public class SeasonAdapter extends BaseExpandableListAdapter {
         }
 
         episodeNumber.setText(Converter.twoDigitNumber(episode.getEpisodeNumber()) + ".");
+
+        // Inserindo o nome do episódio no formato '
         episodeName.setText(episode.getName());
+
+        // Desabilitando a checkbox em episódios não exibidos
+        if (episode.isAired()){
+            watched.setEnabled(true);
+        } else {
+            // Exibindo a data no padrão brasileiro
+            try {
+                Calendar cal = Converter.stringToDate(episode.getAirDate());
+                Date date = cal.getTime();
+                String dateBR = new SimpleDateFormat("dd-MM-yyyy").format(date);
+                episodeName.append(" em : " + dateBR);
+            } catch (NullPointerException e) {
+                episodeName.append(" em : " + "indisponível");
+            } finally {
+                watched.setEnabled(false);
+            }
+        }
 
         watched.setOnClickListener(new View.OnClickListener() {
             @Override

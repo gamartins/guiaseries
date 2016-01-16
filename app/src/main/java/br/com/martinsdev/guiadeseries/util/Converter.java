@@ -9,7 +9,7 @@ import java.util.Date;
  * Created by gabriel on 09/12/15.
  */
 public class Converter {
-    static public Calendar convertDate(String unformattedDate){
+    static public Calendar stringToDate(String unformattedDate){
         Calendar cal = null;
 
         try {

@@ -75,7 +75,7 @@ public class ResultAdapter extends ArrayAdapter<Result>{
         });
 
         String imagePath = baseURL + result.getPosterPath();
-        Calendar calendar = Converter.convertDate(result.getFirstAirDate());
+        Calendar calendar = Converter.stringToDate(result.getFirstAirDate());
         String genreName = Genre.getNameById(result.getGenreIds().get(0));
 
         seriesName.setText(result.getName());
