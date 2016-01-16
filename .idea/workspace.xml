@@ -23,14 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ed6260f-fa9d-4415-9290-ba89c7f851f3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/Converter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Episode.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/model/Episode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/FollowedSeries.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/FollowedSeries.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/ResultAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/ResultAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/SeasonAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/util/adapters/SeasonAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailed_series_expandable_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/NewEpisodeSeries.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/NewEpisodeSeries.java" />
     </list>
     <ignored path="guiaseries.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +47,8 @@
       <file leaf-file-name="NewEpisodeSeries.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/NewEpisodeSeries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13416816">
-              <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.18783543">
+              <caret line="107" column="16" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
               <folding>
                 <element signature="method#onCreate#0;class#NewEpisodeSeries#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#NewEpisodeSeries#0" expanded="false" />
@@ -2869,8 +2862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/com/martinsdev/guiadeseries/view/NewEpisodeSeries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13416816">
-          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.18783543">
+          <caret line="107" column="16" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
           <folding>
             <element signature="method#onCreate#0;class#NewEpisodeSeries#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#NewEpisodeSeries#0" expanded="false" />

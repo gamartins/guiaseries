@@ -105,6 +105,13 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
                 List<Episode> episodeList = lastSeason.getEpisodeList();
                 List<Episode> episodesRetain = new ArrayList<Episode>();
 
+                /*Fix: Bug no atributo TVShow.number_of_episodes enviado pela API, o número de episódios
+                na serie é menor que a quantidade de episódios na temporada, sendo que a temporada esta
+                correta.*/
+                if (tvShow.getNumberOfEpisodes() < lastSeason.getEpisodeList().size()){
+                    tvShow.setNumberOfEpisodes(lastSeason.getEpisodeList().size());
+                }
+
                 Calendar calendar = Calendar.getInstance();
                 Date today = calendar.getTime();
                 DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
