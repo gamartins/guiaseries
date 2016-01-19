@@ -1,8 +1,8 @@
 package br.com.martinsdev.guiadeseries.view;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,11 +13,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import br.com.martinsdev.guiadeseries.R;
-import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
 import br.com.martinsdev.guiadeseries.controller.DatabaseClientTVShow;
+import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.Converter;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
+import br.com.martinsdev.guiadeseries.util.SearchSeriesDialog;
 import br.com.martinsdev.guiadeseries.util.adapters.TvShowAdapter;
 import retrofit.Call;
 import retrofit.Callback;
@@ -32,6 +33,7 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
     private DataStorage storage;
     private TvShowAdapter showAdapter;
     private String listName = "seriesID";
+    private SearchSeriesDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,10 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
 
         gridViewSeries = (GridView) findViewById(R.id.followed_series);
         gridViewSeries.setAdapter(showAdapter);
+
+        //ProgressDialog enquanto as series são consultadas no sistema
+        dialog = new SearchSeriesDialog(this, "Procurando temporadas ", listSeriesId.size());
+        dialog.show();
 
         for (String serieId : listSeriesId){
             Call<TVShow> call = client.getTvShow(serieId);
@@ -79,11 +85,12 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
         TVShow tvShow = (TVShow) response.body();
         tvShowArrayList.add(tvShow);
         showAdapter.notifyDataSetChanged();
+        dialog.increment();
     }
 
     @Override
     public void onFailure(Throwable t) {
-
+        Log.e("Retrofit", t.getLocalizedMessage());
     }
 
     @Override

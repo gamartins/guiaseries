@@ -3,16 +3,12 @@ package br.com.martinsdev.guiadeseries.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
+
+import javax.annotation.Generated;
 
 @Generated("org.jsonschema2pojo")
 public class Season implements Parcelable {

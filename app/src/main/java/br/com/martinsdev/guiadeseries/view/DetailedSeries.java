@@ -2,8 +2,8 @@ package br.com.martinsdev.guiadeseries.view;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
@@ -16,6 +16,7 @@ import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
 import br.com.martinsdev.guiadeseries.model.Season;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
+import br.com.martinsdev.guiadeseries.util.SearchSeriesDialog;
 import br.com.martinsdev.guiadeseries.util.adapters.SeasonAdapter;
 import retrofit.Call;
 import retrofit.Callback;
@@ -31,6 +32,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback {
     TVShow tvShow;
     public static final int RESULT_DELETED = 3;
     Intent returnIntent;
+    SearchSeriesDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,10 @@ public class DetailedSeries extends AppCompatActivity implements Callback {
 
         adapter = new SeasonAdapter(getBaseContext(), tvShow.getSeasons(), tvShow.getId());
         listView.setAdapter(adapter);
+
+        //ProgressDialog enquanto as series são consultadas no sistema
+        dialog = new SearchSeriesDialog(this, "Procurando temporadas ", tvShow.getNumberOfSeasons());
+        dialog.show();
 
         // Inserindo os episódios de um temporada em um TVShow
         for (int i = 1; i <= tvShow.getNumberOfSeasons(); i++) {
@@ -110,7 +116,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback {
         Season season = (Season) response.body();
         tvShow.setSeason(season.getSeasonNumber(), season);
         adapter.notifyDataSetChanged();
-
+        dialog.increment();
 
         // Verificando o conteúdo das variáveis
         /*StringBuilder sb = new StringBuilder();

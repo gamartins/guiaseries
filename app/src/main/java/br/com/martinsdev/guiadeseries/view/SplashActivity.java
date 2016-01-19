@@ -2,10 +2,9 @@ package br.com.martinsdev.guiadeseries.view;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Toast;
 
 import br.com.martinsdev.guiadeseries.controller.DatabaseClientTVShow;
 import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;

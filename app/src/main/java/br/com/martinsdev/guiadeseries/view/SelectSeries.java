@@ -1,9 +1,9 @@
 package br.com.martinsdev.guiadeseries.view;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
@@ -19,7 +19,6 @@ import br.com.martinsdev.guiadeseries.model.ListPages;
 import br.com.martinsdev.guiadeseries.model.Result;
 import br.com.martinsdev.guiadeseries.util.EndlessScrollListener;
 import br.com.martinsdev.guiadeseries.util.adapters.ResultAdapter;
-
 import retrofit.Call;
 import retrofit.Callback;
 import retrofit.Response;

@@ -1,8 +1,8 @@
 package br.com.martinsdev.guiadeseries.view;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,6 +28,7 @@ import br.com.martinsdev.guiadeseries.model.Season;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.Converter;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
+import br.com.martinsdev.guiadeseries.util.SearchSeriesDialog;
 import br.com.martinsdev.guiadeseries.util.adapters.TvShowAdapter;
 import retrofit.Call;
 import retrofit.Callback;
@@ -42,6 +43,7 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
     private GridView gridViewSeries;
     private TvShowAdapter showAdapter;
     private String listName = "seriesID";
+    private SearchSeriesDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,10 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
         gridViewSeries = (GridView) findViewById(R.id.followed_series);
 
         gridViewSeries.setAdapter(showAdapter);
+
+        //ProgressDialog enquanto as series são consultadas no sistema
+        dialog = new SearchSeriesDialog(this, "Procurando temporadas ", listSeriesId.size());
+        dialog.show();
 
         for (String serieId : listSeriesId){
             Call<TVShow> call = tvClient.getTvShow(serieId);
@@ -152,6 +158,9 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
                     tvShowArrayList.add(tvShow);
                     showAdapter.notifyDataSetChanged();
                 }
+
+                // Encerra a ProgressBar caso todas as series tinham sido carregadas
+                dialog.increment();
 
                 //Log.v("Guia", "A serie " + tvShow.getName() + " possui " + episodeList.size() + " episódios não exibidos");
             }

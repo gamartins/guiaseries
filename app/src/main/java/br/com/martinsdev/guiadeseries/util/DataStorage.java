@@ -2,7 +2,6 @@ package br.com.martinsdev.guiadeseries.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashSet;

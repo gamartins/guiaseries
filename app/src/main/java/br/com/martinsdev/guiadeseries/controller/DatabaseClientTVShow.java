@@ -1,6 +1,5 @@
 package br.com.martinsdev.guiadeseries.controller;
 
-import br.com.martinsdev.guiadeseries.model.Episode;
 import br.com.martinsdev.guiadeseries.model.ListPages;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import retrofit.Call;
