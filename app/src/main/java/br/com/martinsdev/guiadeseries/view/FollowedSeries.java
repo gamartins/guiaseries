@@ -52,9 +52,13 @@ public class FollowedSeries extends AppCompatActivity implements Callback{
         dialog = new SearchSeriesDialog(this, "Procurando temporadas ", listSeriesId.size());
         dialog.show();
 
-        for (String serieId : listSeriesId){
-            Call<TVShow> call = client.getTvShow(serieId);
-            call.enqueue(this);
+        if (listSeriesId.isEmpty()) {
+            dialog.dismiss();
+        } else {
+            for (String serieId : listSeriesId){
+                Call<TVShow> call = client.getTvShow(serieId);
+                call.enqueue(this);
+            }
         }
     }
 

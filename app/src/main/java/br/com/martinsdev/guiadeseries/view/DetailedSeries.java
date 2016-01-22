@@ -1,18 +1,25 @@
 package br.com.martinsdev.guiadeseries.view;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ExpandableListView;
+
+import java.util.List;
 
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.controller.DatabaseClientSeason;
 import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
+import br.com.martinsdev.guiadeseries.model.Episode;
 import br.com.martinsdev.guiadeseries.model.Season;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
@@ -23,7 +30,7 @@ import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class DetailedSeries extends AppCompatActivity implements Callback {
+public class DetailedSeries extends AppCompatActivity implements Callback, AdapterView.OnItemLongClickListener {
     DatabaseClientSeason client = ServiceGenerator.createService(DatabaseClientSeason.class);
     private String listName = "seriesID";
     DisplayMetrics metrics;
@@ -65,6 +72,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback {
 
         adapter = new SeasonAdapter(getBaseContext(), tvShow.getSeasons(), tvShow.getId());
         listView.setAdapter(adapter);
+        listView.setOnItemLongClickListener(this);
 
         //ProgressDialog enquanto as series são consultadas no sistema
         dialog = new SearchSeriesDialog(this, "Procurando temporadas ", tvShow.getNumberOfSeasons());
@@ -142,5 +150,43 @@ public class DetailedSeries extends AppCompatActivity implements Callback {
         final float scale = getResources().getDisplayMetrics().density;
         // Convert the dps to pixels, based on density scale
         return (int) (pixels * scale + 0.5f);
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+        final int temporada = position + 1;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Deseja marcar a temporada como assistida ?")
+                .setTitle("Temporada completa")
+                .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String listName = "serie_ID" + tvShow.getId();
+                        DataStorage storage = new DataStorage(getApplicationContext(), listName);
+
+                        Season season = tvShow.getSeason(position);
+                        List<Episode> episodes = season.getEpisodeList();
+
+                        for (Episode episode : episodes){
+                            episode.setWatched(true);
+                            storage.add(episode.getId());
+                        }
+
+                        season.setEpisodeList(episodes);
+                        tvShow.setSeason(temporada, season);
+
+                        adapter.notifyDataSetChanged();
+                    }
+                })
+                .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .create()
+                .show();
+
+        return true;
     }
 }
