@@ -169,8 +169,10 @@ public class DetailedSeries extends AppCompatActivity implements Callback, Adapt
                         List<Episode> episodes = season.getEpisodeList();
 
                         for (Episode episode : episodes){
-                            episode.setWatched(true);
-                            storage.add(episode.getId());
+                            if (episode.isAired()) {
+                                episode.setWatched(true);
+                                storage.add(episode.getId());
+                            }
                         }
 
                         season.setEpisodeList(episodes);
