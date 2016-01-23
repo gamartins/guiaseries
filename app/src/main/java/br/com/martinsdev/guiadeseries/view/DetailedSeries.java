@@ -89,6 +89,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback, Adapt
         returnIntent = new Intent();
         returnIntent.putExtra("tvShow", tvShow);
         setResult(Activity.RESULT_OK, returnIntent);
+
     }
 
     @Override
