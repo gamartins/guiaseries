@@ -18,6 +18,7 @@ import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.Converter;
 import br.com.martinsdev.guiadeseries.view.DetailedSeries;
+import br.com.martinsdev.guiadeseries.view.SeasonSeries;
 
 /**
  * Created by gabriel on 21/12/15.
@@ -64,7 +65,7 @@ public class TvShowAdapter extends ArrayAdapter<TVShow> {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), DetailedSeries.class);
+                Intent intent = new Intent(getContext(), SeasonSeries.class);
                 intent.putExtra("tvShow", tvShow);
 
                 ((Activity) getContext()).startActivityForResult(intent, REQUEST_CODE);

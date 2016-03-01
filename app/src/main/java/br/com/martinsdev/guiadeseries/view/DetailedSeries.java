@@ -24,7 +24,7 @@ import br.com.martinsdev.guiadeseries.model.Season;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
 import br.com.martinsdev.guiadeseries.util.SearchSeriesDialog;
-import br.com.martinsdev.guiadeseries.util.adapters.SeasonAdapter;
+import br.com.martinsdev.guiadeseries.util.adapters.DetailedAdapter;
 import retrofit.Call;
 import retrofit.Callback;
 import retrofit.Response;
@@ -35,7 +35,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback, Adapt
     private String listName = "seriesID";
     DisplayMetrics metrics;
     int width;
-    SeasonAdapter adapter;
+    DetailedAdapter adapter;
     TVShow tvShow;
     public static final int RESULT_DELETED = 3;
     Intent returnIntent;
@@ -70,7 +70,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback, Adapt
 
         setTitle(tvShow.getName());
 
-        adapter = new SeasonAdapter(getBaseContext(), tvShow.getSeasons(), tvShow.getId());
+        adapter = new DetailedAdapter(getBaseContext(), tvShow.getSeasons(), tvShow.getId());
         listView.setAdapter(adapter);
         listView.setOnItemLongClickListener(this);
 
@@ -89,7 +89,6 @@ public class DetailedSeries extends AppCompatActivity implements Callback, Adapt
         returnIntent = new Intent();
         returnIntent.putExtra("tvShow", tvShow);
         setResult(Activity.RESULT_OK, returnIntent);
-
     }
 
     @Override

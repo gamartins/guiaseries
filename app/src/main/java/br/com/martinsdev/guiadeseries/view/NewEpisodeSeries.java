@@ -193,7 +193,7 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == TvShowAdapter.REQUEST_CODE) {
+        if (requestCode == TvShowAdapter.REQUEST_CODE && data != null ) {
             TVShow show = data.getExtras().getParcelable("tvShow");
 
             // Caso a serie tenha sido deletada
