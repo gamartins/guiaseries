@@ -91,7 +91,7 @@ public class SelectSeries extends AppCompatActivity implements Callback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_series);
 
-        listView = (ListView) findViewById(R.id.list_series);
+        listView = (ListView) findViewById(R.id.selected_series_list);
         results = new ArrayList<Result>();
         adapter = new ResultAdapter(this, results);
 

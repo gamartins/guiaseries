@@ -9,7 +9,6 @@
         android:textSize="20sp"
         android:fontFamily="sans-serif"
         android:paddingTop="10dp"
-        android:textStyle="bold"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"

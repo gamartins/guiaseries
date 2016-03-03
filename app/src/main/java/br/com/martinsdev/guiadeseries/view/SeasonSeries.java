@@ -46,7 +46,7 @@ public class SeasonSeries extends AppCompatActivity implements Callback {
 
         setTitle(tvShow.getName());
 
-        seasonAdapter = new SeasonAdapter(this, tvShow.getSeasons());
+        seasonAdapter = new SeasonAdapter(this, tvShow.getSeasons(), tvShow.getId());
 
         ListView listView = (ListView) findViewById(R.id.list_season);
         listView.setAdapter(seasonAdapter);

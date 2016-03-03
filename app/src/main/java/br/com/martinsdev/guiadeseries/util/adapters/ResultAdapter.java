@@ -41,11 +41,11 @@ public class ResultAdapter extends ArrayAdapter<Result>{
                     .inflate(R.layout.activity_selected_series_item_list, parent, false);
         }
 
-        TextView seriesName = (TextView) convertView.findViewById(R.id.seriesName);
-        TextView seriesGenre = (TextView) convertView.findViewById(R.id.seriesGenre);
-        TextView seriesYear = (TextView) convertView.findViewById(R.id.seriesYear);
-        ImageView poster = (ImageView) convertView.findViewById(R.id.poster);
-        final ImageView addSerieIcon = (ImageView) convertView.findViewById(R.id.add_serie);
+        TextView seriesName = (TextView) convertView.findViewById(R.id.selected_series_item_name);
+        TextView seriesGenre = (TextView) convertView.findViewById(R.id.selected_series_item_genre);
+        TextView seriesYear = (TextView) convertView.findViewById(R.id.selected_series_item_year);
+        ImageView poster = (ImageView) convertView.findViewById(R.id.selected_series_item_poster);
+        final ImageView addSerieIcon = (ImageView) convertView.findViewById(R.id.selected_series_item_button_add_serie);
 
         // Verifica se a serie esta na lista e a marca como acompanhada
         if (storage.searchItem(result.getId())) {

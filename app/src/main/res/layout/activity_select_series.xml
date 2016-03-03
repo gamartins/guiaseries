@@ -8,7 +8,7 @@
     tools:context=".view.SelectSeries">
 
     <ListView
-        android:id="@+id/list_series"
+        android:id="@+id/selected_series_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#000"
