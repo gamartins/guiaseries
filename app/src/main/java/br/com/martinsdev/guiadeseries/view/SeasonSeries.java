@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,14 +27,11 @@ import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
-public class SeasonSeries extends AppCompatActivity implements Callback {
-    DatabaseClientSeason client = ServiceGenerator.createService(DatabaseClientSeason.class);
+public class SeasonSeries extends AppCompatActivity {
     private String listName = "seriesID";
     SeasonAdapter seasonAdapter;
     TVShow tvShow;
-    public static final int RESULT_DELETED = 3;
     Intent returnIntent;
-    SearchSeriesDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,33 +84,19 @@ public class SeasonSeries extends AppCompatActivity implements Callback {
     }
 
     @Override
-    public void onResponse(Response response, Retrofit retrofit) {
-        Season season = (Season) response.body();
-        tvShow.setSeason(season.getSeasonNumber(), season);
-        seasonAdapter.notifyDataSetChanged();
-        dialog.increment();
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            int seasonId = data.getIntExtra("seasonId", 0);
+            DataStorage storage = new DataStorage(this, "seasonID");
 
-        // Verificando o conteúdo das variáveis
-        /*StringBuilder sb = new StringBuilder();
-        sb.append(tvShow.getName() + "\n" + season.getName() + "\n");
-
-        List<Episode> episodeList = tvShow.getSeason(season.getSeasonNumber() - 1).getEpisodeList();
-        for (Episode episode : episodeList) {
-            sb.append(episode.getEpisodeNumber() + " " + episode.getName() + "\n");
+            if (resultCode == RESULT_OK) {
+                storage.add(seasonId);
+                seasonAdapter.notifyDataSetChanged();
+            } else {
+                storage.remove(seasonId);
+                seasonAdapter.notifyDataSetChanged();
+            }
         }
-
-        String message = sb.toString();
-        Log.v("Guia", message);*/
-
     }
 
-    @Override
-    public void onFailure(Throwable t) {
-        Log.e("Error", t.getLocalizedMessage());
-    }
-
-    public void getEpisodesFromSeason(int seasonNumber){
-        Call<Season> call = client.getSeasonInfo(tvShow.getId(), seasonNumber);
-        call.enqueue(this);
-    }
 }
