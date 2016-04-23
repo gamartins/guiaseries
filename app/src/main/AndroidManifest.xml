@@ -33,6 +33,13 @@
         </activity>
         <activity android:name=".view.SeasonSeries" />
         <activity android:name=".view.EpisodeSeries"></activity>
+
+        <receiver android:name=".controller.alarm.AlarmReceiver" android:process=":remote"/>
+        <receiver android:name=".controller.alarm.BootReceiver" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -1,13 +1,20 @@
 package br.com.martinsdev.guiadeseries.view;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
 import br.com.martinsdev.guiadeseries.controller.DatabaseClientTVShow;
 import br.com.martinsdev.guiadeseries.controller.ServiceGenerator;
+import br.com.martinsdev.guiadeseries.controller.alarm.AlarmReceiver;
+import br.com.martinsdev.guiadeseries.controller.alarm.BootReceiver;
 import br.com.martinsdev.guiadeseries.model.ListPages;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
 import retrofit.Call;
@@ -25,6 +32,30 @@ public class SplashActivity extends AppCompatActivity implements Callback {
         DatabaseClientTVShow client = ServiceGenerator.createService(DatabaseClientTVShow.class);
         Call<ListPages> call = client.getPopularTvShows(1);
         call.enqueue(this);
+
+        // Iniciando o alarme
+        createAlarm();
+    }
+
+    private void createAlarm(){
+        // Configurando para a cada minuto -> debug
+//        long interval_three_minutes = AlarmManager.INTERVAL_FIFTEEN_MINUTES / 15;
+        long interval_three_minutes = AlarmManager.INTERVAL_HOUR;
+
+        Intent intent = new Intent(getApplicationContext(), AlarmReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, intent, 0);
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME,
+                interval_three_minutes, interval_three_minutes, pendingIntent);
+
+        // Ativando o alarme durante o boot
+        ComponentName receiver = new ComponentName(getApplicationContext(), BootReceiver.class);
+        PackageManager manager = getApplicationContext().getPackageManager();
+
+        manager.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP);
     }
 
     @Override

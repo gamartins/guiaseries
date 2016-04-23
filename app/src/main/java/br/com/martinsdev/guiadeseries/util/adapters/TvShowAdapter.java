@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.model.TVShow;
 import br.com.martinsdev.guiadeseries.util.Converter;
-import br.com.martinsdev.guiadeseries.view.DetailedSeries;
 import br.com.martinsdev.guiadeseries.view.SeasonSeries;
 
 /**

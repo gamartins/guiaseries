@@ -5,6 +5,7 @@ import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
+import com.squareup.okhttp.logging.HttpLoggingInterceptor;
 
 import java.io.IOException;
 
@@ -24,25 +25,6 @@ public class ServiceGenerator {
                     .baseUrl(API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create());
 
-    /*public static <S> S createService(Class<S> serviceClass) {
-        // Inserindo a API_KEY em todas as requisições
-        httpClient.interceptors().add(new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Request request = chain.request();
-                HttpUrl url = request.httpUrl()
-                        .newBuilder()
-                        .addQueryParameter("api_key", API_KEY)
-                        .build();
-
-                request = request.newBuilder().url(url).build();
-                return chain.proceed(request);
-            }
-        });
-
-        Retrofit retrofit = builder.client(httpClient).build();
-        return retrofit.create(serviceClass);
-    }*/
 
     public static <S> S createService(Class<S> serviceClass) {
         if (API_KEY != null) {
@@ -61,6 +43,11 @@ public class ServiceGenerator {
                     return chain.proceed(request);
                 }
             });
+
+            // Log das informações transferidas
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+            httpClient.interceptors().add(loggingInterceptor);
         }
 
         Retrofit retrofit = builder.client(httpClient).build();

@@ -101,7 +101,7 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
         final TVShow tvShow = (TVShow) response.body();
         final DataStorage watchedEpisodeStorage = new DataStorage(getApplicationContext(), "serie_ID" + tvShow.getId());
 
-        tvShow.removeExtraSeason();
+        tvShow.removeExtrasSeason();
 
         List<Season> seasonList = tvShow.getSeasons();
         Season season = seasonList.get(seasonList.size() - 1);
@@ -119,7 +119,7 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
                 episódios na serie ou temporada enviada pela API. O número de episódios é menor que
                  o valor real.*/
 
-                int seasonEpisodeCount = tvShow.getSeason(lastSeason.getSeasonNumber() - 1).getEpisodeCount(); // -> lastSeason.episodeCount ?????
+                int seasonEpisodeCount = tvShow.getSeason(lastSeason.getSeasonNumber() - 1).getEpisodeCount();
 
                 if (seasonEpisodeCount < episodeList.size()){
                     int diferenceEpisodeSize = episodeList.size() - seasonEpisodeCount;

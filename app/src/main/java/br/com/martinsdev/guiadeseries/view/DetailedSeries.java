@@ -66,7 +66,7 @@ public class DetailedSeries extends AppCompatActivity implements Callback, Adapt
         }
 
         tvShow = bundle.getParcelable("tvShow");
-        tvShow.removeExtraSeason();
+        tvShow.removeExtrasSeason();
 
         setTitle(tvShow.getName());
 

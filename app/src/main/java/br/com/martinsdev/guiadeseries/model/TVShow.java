@@ -567,7 +567,7 @@ public class TVShow implements Parcelable {
     /**
      * Remove the extras season from the list of seasons
      */
-    public void removeExtraSeason(){
+    public void removeExtrasSeason(){
         if (getSeason(0).getSeasonNumber() == 0) {
             this.seasons.remove(0);
         }

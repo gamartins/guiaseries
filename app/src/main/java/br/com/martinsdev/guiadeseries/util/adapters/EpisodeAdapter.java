@@ -1,13 +1,10 @@
 package br.com.martinsdev.guiadeseries.util.adapters;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -17,10 +14,8 @@ import java.util.List;
 
 import br.com.martinsdev.guiadeseries.R;
 import br.com.martinsdev.guiadeseries.model.Episode;
-import br.com.martinsdev.guiadeseries.model.Season;
 import br.com.martinsdev.guiadeseries.util.Converter;
 import br.com.martinsdev.guiadeseries.util.DataStorage;
-import br.com.martinsdev.guiadeseries.view.EpisodeSeries;
 
 /**
  * Created by gabriel on 2/29/16.
