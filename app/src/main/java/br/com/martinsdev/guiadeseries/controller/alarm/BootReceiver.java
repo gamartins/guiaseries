@@ -15,8 +15,8 @@ public class BootReceiver extends BroadcastReceiver {
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")){
 
             // Alarme gerado a cada 3 minutos
-            long interval_three_minutes = AlarmManager.INTERVAL_FIFTEEN_MINUTES / 6;
-//            long interval_three_minutes = AlarmManager.INTERVAL_HOUR;
+//            long interval_three_minutes = AlarmManager.INTERVAL_FIFTEEN_MINUTES / 6;
+            long interval_three_minutes = AlarmManager.INTERVAL_HOUR;
 
             Intent receiverIntent = new Intent(context, AlarmReceiver.class);
             PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, receiverIntent, 0);

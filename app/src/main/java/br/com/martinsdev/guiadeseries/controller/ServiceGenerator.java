@@ -1,5 +1,6 @@
 package br.com.martinsdev.guiadeseries.controller;
 
+import com.squareup.okhttp.Call;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
@@ -29,6 +30,8 @@ public class ServiceGenerator {
     public static <S> S createService(Class<S> serviceClass) {
         if (API_KEY != null) {
             httpClient.interceptors().clear();
+
+            // Interceptor para inserir o chave da API a consulta
             httpClient.interceptors().add(new Interceptor() {
                 @Override
                 public Response intercept(Interceptor.Chain chain) throws IOException {
@@ -48,6 +51,28 @@ public class ServiceGenerator {
             HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
             httpClient.interceptors().add(loggingInterceptor);
+
+            // Reenvio da solicitação em caso de código HTTP 429 Too Many Requests
+            httpClient.interceptors().add(new Interceptor() {
+                @Override
+                public Response intercept(Chain chain) throws IOException {
+                    Request request = chain.request();
+
+                    // Executamos a requisição
+                    Response response = chain.proceed(request);
+
+                    if (response.code() == 429){
+                        try {
+                            Thread.sleep(10000);
+                            return chain.proceed(request);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    return response;
+                }
+            });
         }
 
         Retrofit retrofit = builder.client(httpClient).build();
