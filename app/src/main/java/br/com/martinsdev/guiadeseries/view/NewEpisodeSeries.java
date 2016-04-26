@@ -229,6 +229,13 @@ public class NewEpisodeSeries extends AppCompatActivity implements Callback {
                 showAdapter.notifyDataSetChanged();
 
             }
+
+            // Caso todos os episódios tenham sido assistidos
+            if (show.getUnwatchedEpisodes() == 0){
+                int tvShowIndex = tvShowArrayList.indexOf(show);
+                tvShowArrayList.remove(tvShowIndex);
+                showAdapter.notifyDataSetChanged();
+            }
         }
     }
 }
