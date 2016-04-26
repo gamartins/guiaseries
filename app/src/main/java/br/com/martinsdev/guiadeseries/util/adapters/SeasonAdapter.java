@@ -88,6 +88,9 @@ public class SeasonAdapter extends ArrayAdapter<Season> {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
+                        DataStorage storage = new DataStorage(getContext(), "seasonID");
+                        storage.add(season.getId());
+
                         DatabaseClientSeason client = ServiceGenerator.createService(DatabaseClientSeason.class);
                         Call<Season> call = client.getSeasonInfo(tvShowId, season.getSeasonNumber());
 
@@ -130,6 +133,9 @@ public class SeasonAdapter extends ArrayAdapter<Season> {
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        DataStorage storage = new DataStorage(getContext(), "seasonID");
+                        storage.remove(season.getId());
+
                         DatabaseClientSeason client = ServiceGenerator.createService(DatabaseClientSeason.class);
                         Call<Season> call = client.getSeasonInfo(tvShowId, season.getSeasonNumber());
 
